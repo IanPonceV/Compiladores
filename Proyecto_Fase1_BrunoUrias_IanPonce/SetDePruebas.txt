@@ -1,0 +1,70 @@
+# ==========================================
+# Archivo: prueba_unificada.mlng
+# Autores: Bruno Urias e Ian Ponce
+# Proposito: Evaluar todas las funcionalidades del lenguaje y la tolerancia a errores en una sola corrida
+# ==========================================
+
+# 1. Hola Mundo y declaracion de variables basicas
+string saludo = "Hola Mundo, iniciando prueba unificada"
+Write(saludo)
+
+# 2. Definicion de funciones y operaciones aritmeticas
+def calcularArea(float base, float altura):
+    float area = (base * altura) / 2.0
+    return area
+
+float miBase = 10.5
+float miAltura = 4.0
+float resultadoArea = calcularArea(miBase, miAltura)
+
+Write("El area calculada es:")
+Write(resultadoArea)
+
+# 3. Lectura de datos, condicional If/Else y booleanos
+int edad
+Write("Ingresa una edad para evaluar:")
+Read(edad)
+
+if edad >= 18:
+    Write("Acceso permitido")
+    bool estado = true
+else:
+    Write("Acceso denegado")
+    bool estado = false
+
+# 4. Ciclo While
+int contador = 0
+int limite = 3
+Write("Iniciando ciclo:")
+
+while contador < limite:
+    Write(contador)
+    contador = contador + 1
+
+# ==========================================
+# 5. SECCION DE RECUPERACION DE ERRORES
+# A partir de aqui forzamos fallos para ver si el compilador sobrevive
+# ==========================================
+Write("--- Iniciando prueba de tolerancia a errores ---")
+
+# Error 1: Caracteres invalidos que no pertenecen a MiniLang
+int precio = 100 $
+float descuento = 0.15 @
+
+# Error 2: String sin cerrar (se corta con el salto de linea)
+string textoRoto = "Esta cadena no tiene comilla final
+
+# Error 3: Identificadores que superan los 31 caracteres (deberian truncarse)
+int estaVariableTieneExactamenteTreintaYDosCaracteres = 99
+float estaOtraVariableTieneMuchosMasDeTreintaYUnCaracteres = 3.14
+
+# Error 4: Numero flotante mal formado (le faltan los decimales)
+float numeroIncompleto = 5.
+
+# Error 5: Indentacion invalida (volver a un nivel de espacios que no existia antes)
+if precio > 50:
+    Write("Descuento aplicado")
+    int x = 1
+  Write("Este nivel de indentacion va a generar un error")
+
+Write("Prueba unificada finalizada. Si ves esto, el compilador no se cayo.")
