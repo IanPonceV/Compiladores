@@ -14,4 +14,9 @@ Las expresiones rechazadas tienen caracteres o combinaciones que no son de ningu
 Estrategia de manejo de errores
 
 El manejo de errores se basa en detectar el primer carácter inválido durante la tokenización.
+
 Al encontrar un token ERROR, el analizador lanza una excepción con un mensaje claro diciendo el símbolo desconocido y esto evita que el análisis continúe y  al igual que la identificación del problema.
+
+Justificación de la gramática regular.
+
+La gramática realizada para dar solución al ejercicio es una combinación de tres gramáticas distintas, una para cada sistema de numeración (binario, octal y hexadecimal). Cada una fue diseñada respetando las restricciones propias de su sistema, particularmente en cuanto al conjunto de símbolos permitidos. De esta manera, se garantiza que las cadenas generadas por la gramática correspondan únicamente a números válidos dentro de cada sistema de numeración.
