@@ -8,13 +8,13 @@ Para que nuestro lenguaje MiniLang pudiera entender cosas básicas como variable
 
 A continuación, le compartimos cómo quedó estructurada nuestra gramática:
 
-<Program> ::= <StatementList>
-<StatementList> ::= <Statement> <StatementList> | ε
-<Statement> ::= <VarDecl> | <Assignment> | <IfStmt> | <WhileStmt> | <FuncDecl> | <FuncCall> | <IOStmt>
+'<Program> ::= <StatementList>
+'<StatementList> ::= <Statement> <StatementList> | ε
+'<Statement> ::= <VarDecl> | <Assignment> | <IfStmt> | <WhileStmt> | <FuncDecl> | <FuncCall> | <IOStmt>
 
-<VarDecl> ::= <Type> "ID" "=" <Expression> "NEWLINE"
-<Type> ::= "int" | "float" | "string" | "bool"
-<Assignment> ::= "ID" "=" <Expression> "NEWLINE"
+'<VarDecl> ::= <Type> "ID" "=" <Expression> "NEWLINE"
+'<Type> ::= "int" | "float" | "string" | "bool"
+'<Assignment> ::= "ID" "=" <Expression> "NEWLINE"
 
 <IfStmt> ::= "if" <Condition> ":" "NEWLINE" "INDENT" <StatementList> "DEDENT" <ElseClause>
 <ElseClause> ::= "else" ":" "NEWLINE" "INDENT" <StatementList> "DEDENT" | ε
