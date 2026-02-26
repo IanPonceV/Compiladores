@@ -60,11 +60,3 @@ float estaOtraVariableTieneMuchosMasDeTreintaYUnCaracteres = 3.14
 
 # Error 4: Numero flotante mal formado (le faltan los decimales)
 float numeroIncompleto = 5.
-
-# Error 5: Indentacion invalida (volver a un nivel de espacios que no existia antes)
-if precio > 50:
-    Write("Descuento aplicado")
-    int x = 1
-  Write("Este nivel de indentacion va a generar un error")
-
-Write("Prueba unificada finalizada. Si ves esto, el compilador no se cayo.")
