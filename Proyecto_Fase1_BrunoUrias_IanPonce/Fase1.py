@@ -254,7 +254,6 @@ class AnalizadorLexico:
         # Ignorar hasta el salto de línea, pero NO consumir el \n (para que el loop principal lo vea)
         while self.posicion < self.longitud and self.fuente[self.posicion] != '\n':
             self.posicion += 1
-            # Nota: No avanzamos self.columna visualmente si se ignora, o puedes sumarlo si quieres trackearlo
 
     def escanear_identificador(self):
         col_inicio = self.columna
@@ -499,4 +498,5 @@ class InterfazMiniLang:
 if __name__ == "__main__":
     root = tk.Tk()
     app = InterfazMiniLang(root)
+
     root.mainloop()
