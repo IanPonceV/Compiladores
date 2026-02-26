@@ -363,7 +363,7 @@ class AnalizadorLexico:
         return False
 
 # ==========================================
-# 3. INTERFAZ GRÁFICA (GUI)
+# 3. INTERFAZ GRÁFICA 
 # ==========================================
 
 class InterfazMiniLang:
@@ -500,3 +500,4 @@ if __name__ == "__main__":
     app = InterfazMiniLang(root)
 
     root.mainloop()
+
